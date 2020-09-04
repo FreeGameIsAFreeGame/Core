@@ -2,7 +2,7 @@ using System;
 
 namespace FreeGameIsAFreeGame.Core.Models
 {
-    public class Deal
+    public class Deal : IDeal
     {
         public int Id { get; set; }
         public int PlatformId { get; set; }
