@@ -2,6 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Title>Free Game Is A Free Game - Core</Title>
+        <Authors>Thundernerd</Authors>
+        <Copyright>FreeGameIsAFreeGame</Copyright>
+        <PackageProjectUrl>https://github.com/FreeGameIsAFreeGame/Core</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/FreeGameIsAFreeGame/Core/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/FreeGameIsAFreeGame/Core</RepositoryUrl>
     </PropertyGroup>
 
 </Project>
