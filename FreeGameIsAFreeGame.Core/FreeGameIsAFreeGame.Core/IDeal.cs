@@ -1,6 +1,6 @@
 using System;
 
-namespace FreeGameIsAFreeGame.Core.Models
+namespace FreeGameIsAFreeGame.Core
 {
     public interface IDeal
     {

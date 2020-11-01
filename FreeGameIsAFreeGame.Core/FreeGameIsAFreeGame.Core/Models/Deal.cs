@@ -2,6 +2,7 @@ using System;
 
 namespace FreeGameIsAFreeGame.Core.Models
 {
+    [Serializable]
     public class Deal : IDeal
     {
         public int Id { get; set; }
