@@ -9,6 +9,9 @@ namespace FreeGameIsAFreeGame.Core.Apis
 {
     public abstract class BasicApi<TInterface, TClass> where TClass : TInterface
     {
+        internal BasicApi()
+        { }
+
         protected abstract string Slug { get; }
 
         public async Task<IEnumerable<TInterface>> Get()
