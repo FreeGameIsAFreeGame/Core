@@ -3,9 +3,9 @@ using System;
 namespace FreeGameIsAFreeGame.Core.Models
 {
     [Serializable]
-    public class Guild : IGuild
+    public class TwitterPostedDeal : ITwitterPostedDeal
     {
         public int Id { get; set; }
-        public ulong Snowflake { get; set; }
+        public int DealId { get; set; }
     }
 }
