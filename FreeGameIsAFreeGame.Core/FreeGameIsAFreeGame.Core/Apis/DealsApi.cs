@@ -13,9 +13,33 @@ namespace FreeGameIsAFreeGame.Core.Apis
         protected override string Slug => "deals";
 #endregion
 
+        public async Task<IEnumerable<IDeal>> GetActive()
+        {
+            RestRequest request = new RestRequest($"api/{Slug}/active", Method.GET);
+            IRestResponse response = await Api.Client.ExecuteAsync(request);
+            if (response.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<List<Deal>>(response.Content);
+            }
+
+            throw new ApiException(response);
+        }
+
         public async Task<IEnumerable<IDeal>> GetByPlatform(int id)
         {
             RestRequest request = new RestRequest($"api/{Slug}/platform/{id}", Method.GET);
+            IRestResponse response = await Api.Client.ExecuteAsync(request);
+            if (response.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<List<Deal>>(response.Content);
+            }
+
+            throw new ApiException(response);
+        }
+
+        public async Task<IEnumerable<IDeal>> GetActiveByPlatform(int id)
+        {
+            RestRequest request = new RestRequest($"api/{Slug}/platform/{id}/active", Method.GET);
             IRestResponse response = await Api.Client.ExecuteAsync(request);
             if (response.IsSuccessful)
             {
