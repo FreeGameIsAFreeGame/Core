@@ -14,13 +14,15 @@ namespace FreeGameIsAFreeGame.Core.Apis
 
         protected abstract string Slug { get; }
 
-        public async Task<IEnumerable<TInterface>> Get()
+        public async Task<IReadOnlyList<TInterface>> Get()
         {
             IRestRequest request = new RestRequest($"api/{Slug}", Method.GET);
             IRestResponse result = await Api.Client.ExecuteAsync(request);
             if (result.IsSuccessful)
             {
-                return JsonConvert.DeserializeObject<List<TClass>>(result.Content).Cast<TInterface>();
+                return JsonConvert.DeserializeObject<List<TClass>>(result.Content)
+                                  .Cast<TInterface>()
+                                  .ToList();
             }
 
             throw new ApiException(result);
@@ -43,10 +45,24 @@ namespace FreeGameIsAFreeGame.Core.Apis
             throw new ApiException(result);
         }
 
-        public async Task<TInterface> Post(TInterface guild)
+        public async Task<TInterface> Patch(TInterface value)
+        {
+            RestRequest request = new RestRequest($"api/{Slug}", Method.PATCH);
+            request.AddJsonBody(value);
+
+            IRestResponse response = await Api.Client.ExecuteAsync(request);
+            if (response.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<TClass>(response.Content);
+            }
+
+            throw new ApiException(response);
+        }
+
+        public async Task<TInterface> Post(TInterface value)
         {
             IRestRequest request = new RestRequest($"api/{Slug}", Method.POST);
-            request.AddJsonBody(guild);
+            request.AddJsonBody(value);
 
             IRestResponse result = await Api.Client.ExecuteAsync(request);
             if (result.IsSuccessful)

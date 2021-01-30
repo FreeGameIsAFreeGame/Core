@@ -29,19 +29,5 @@ namespace FreeGameIsAFreeGame.Core.Apis
 
             throw new ApiException(result);
         }
-
-        public async Task<IPlatform> Patch(IPlatform deal)
-        {
-            RestRequest request = new RestRequest($"api/{Slug}", Method.PATCH);
-            request.AddJsonBody(deal);
-
-            IRestResponse response = await Api.Client.ExecuteAsync(request);
-            if (response.IsSuccessful)
-            {
-                return JsonConvert.DeserializeObject<Platform>(response.Content);
-            }
-
-            throw new ApiException(response);
-        }
     }
 }

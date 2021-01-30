@@ -13,13 +13,25 @@ namespace FreeGameIsAFreeGame.Core.Apis
         protected override string Slug => "discord/deals";
 #endregion
 
-        public async Task<IEnumerable<IDiscordPostedDeal>> GetForDeal(IDeal deal)
+        public async Task<IReadOnlyList<IDiscordPostedDeal>> GetForDeal(int id)
         {
-            IRestRequest request = new RestRequest($"api/{Slug}/deal/{deal.Id}", Method.GET);
+            IRestRequest request = new RestRequest($"api/{Slug}/deal/{id}", Method.GET);
             IRestResponse result = await Api.Client.ExecuteAsync(request);
             if (result.IsSuccessful)
             {
-                return JsonConvert.DeserializeObject<List<IDiscordPostedDeal>>(result.Content);
+                return JsonConvert.DeserializeObject<List<DiscordPostedDeal>>(result.Content);
+            }
+
+            throw new ApiException(result);
+        }
+
+        public async Task<IReadOnlyList<IDiscordPostedDeal>> GetForGuild(int id)
+        {
+            IRestRequest request = new RestRequest($"api/{Slug}/guild/{id}", Method.GET);
+            IRestResponse result = await Api.Client.ExecuteAsync(request);
+            if (result.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<List<DiscordPostedDeal>>(result.Content);
             }
 
             throw new ApiException(result);
