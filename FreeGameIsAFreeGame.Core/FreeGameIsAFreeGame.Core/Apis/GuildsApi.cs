@@ -1,4 +1,6 @@
+using System.Threading.Tasks;
 using FreeGameIsAFreeGame.Core.Models;
+using RestSharp;
 
 namespace FreeGameIsAFreeGame.Core.Apis
 {
@@ -8,5 +10,14 @@ namespace FreeGameIsAFreeGame.Core.Apis
         /// <inheritdoc />
         protected override string Slug => "guilds";
 #endregion
+
+        public async Task<bool> Delete(IGuild guild)
+        {
+            IRestRequest request = new RestRequest($"api/{Slug}", Method.DELETE);
+            request.AddJsonBody(guild);
+
+            IRestResponse result = await Api.Client.ExecuteAsync(request);
+            return result.IsSuccessful;
+        }
     }
 }
