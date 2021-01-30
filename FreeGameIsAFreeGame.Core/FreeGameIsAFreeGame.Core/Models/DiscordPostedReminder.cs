@@ -8,6 +8,6 @@ namespace FreeGameIsAFreeGame.Core.Models
         public int Id { get; set; }
         public int DealId { get; set; }
         public int GuildId { get; set; }
-        public int Status { get; set; }
+        public PostStatus Status { get; set; }
     }
 }

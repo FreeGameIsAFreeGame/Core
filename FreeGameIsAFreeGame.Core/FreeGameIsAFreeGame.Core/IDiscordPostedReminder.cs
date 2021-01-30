@@ -5,6 +5,6 @@ namespace FreeGameIsAFreeGame.Core
         int Id { get; set; }
         int DealId { get; set; }
         int GuildId { get; set; }
-        int Status { get; set; }
+        PostStatus Status { get; set; }
     }
 }
