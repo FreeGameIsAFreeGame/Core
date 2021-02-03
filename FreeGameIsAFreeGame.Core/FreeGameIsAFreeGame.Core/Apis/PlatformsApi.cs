@@ -29,22 +29,5 @@ namespace FreeGameIsAFreeGame.Core.Apis
 
             throw new ApiException(result);
         }
-
-        public async Task<IPlatform> GetByDisplayName(string displayName)
-        {
-            IRestRequest request = new RestRequest($"api/{Slug}/name/{displayName}", Method.GET);
-            IRestResponse result = await Api.Client.ExecuteAsync(request);
-            if (result.IsSuccessful)
-            {
-                return JsonConvert.DeserializeObject<Platform>(result.Content);
-            }
-
-            if (result.StatusCode == HttpStatusCode.NotFound)
-            {
-                return null;
-            }
-
-            throw new ApiException(result);
-        }
     }
 }
