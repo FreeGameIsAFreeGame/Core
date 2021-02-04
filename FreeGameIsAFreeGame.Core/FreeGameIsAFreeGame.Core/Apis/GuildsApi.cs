@@ -31,7 +31,7 @@ namespace FreeGameIsAFreeGame.Core.Apis
             throw new ApiException(result);
         }
 
-        public async Task<int> Ensure(List<IGuild> guilds)
+        public async Task<int> Ensure(IEnumerable<IGuild> guilds)
         {
             IRestRequest request = new RestRequest($"api/{Slug}/ensure", Method.POST);
             request.AddJsonBody(guilds);
