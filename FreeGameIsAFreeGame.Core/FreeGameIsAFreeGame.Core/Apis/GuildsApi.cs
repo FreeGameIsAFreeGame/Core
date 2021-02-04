@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using FreeGameIsAFreeGame.Core.Models;
@@ -25,6 +26,20 @@ namespace FreeGameIsAFreeGame.Core.Apis
             if (result.StatusCode == HttpStatusCode.NotFound)
             {
                 return default;
+            }
+
+            throw new ApiException(result);
+        }
+
+        public async Task<int> Ensure(List<IGuild> guilds)
+        {
+            IRestRequest request = new RestRequest($"api/{Slug}/ensure", Method.POST);
+            request.AddJsonBody(guilds);
+
+            IRestResponse result = await Api.Client.ExecuteAsync(request);
+            if (result.IsSuccessful)
+            {
+                return int.Parse(result.Content);
             }
 
             throw new ApiException(result);
