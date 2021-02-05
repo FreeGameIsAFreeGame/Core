@@ -5,17 +5,11 @@ namespace FreeGameIsAFreeGame.Core.Models
     [Serializable]
     public class Platform : IPlatform
     {
-        /// <summary>
-        /// The database entry id
-        /// </summary>
+        /// <inheritdoc />
         public int Id { get; set; }
-        /// <summary>
-        /// The identifier used for filtering
-        /// </summary>
+        /// <inheritdoc />
         public string Identifier { get; set; }
-        /// <summary>
-        /// The name used for displaying to the public
-        /// </summary>
+        /// <inheritdoc />
         public string DisplayName { get; set; }
     }
 }

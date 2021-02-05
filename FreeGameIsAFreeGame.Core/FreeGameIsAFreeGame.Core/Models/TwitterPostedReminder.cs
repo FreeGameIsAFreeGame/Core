@@ -5,13 +5,9 @@ namespace FreeGameIsAFreeGame.Core.Models
     [Serializable]
     public class TwitterPostedReminder : ITwitterPostedReminder
     {
-        /// <summary>
-        /// The database entry id
-        /// </summary>
+        /// <inheritdoc />
         public int Id { get; set; }
-        /// <summary>
-        /// The database entry id of the deal
-        /// </summary>
+        /// <inheritdoc />
         public int DealId { get; set; }
     }
 }

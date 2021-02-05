@@ -5,21 +5,13 @@ namespace FreeGameIsAFreeGame.Core.Models
     [Serializable]
     public class DiscordPostedReminder : IDiscordPostedReminder
     {
-        /// <summary>
-        /// The database entry id
-        /// </summary>
+        /// <inheritdoc />
         public int Id { get; set; }
-        /// <summary>
-        /// The database entry id of the deal
-        /// </summary>
+        /// <inheritdoc />
         public int DealId { get; set; }
-        /// <summary>
-        /// The database entry id of the guild
-        /// </summary>
+        /// <inheritdoc />
         public int GuildId { get; set; }
-        /// <summary>
-        /// The status of the posted reminder
-        /// </summary>
+        /// <inheritdoc />
         public PostStatus Status { get; set; }
     }
 }
