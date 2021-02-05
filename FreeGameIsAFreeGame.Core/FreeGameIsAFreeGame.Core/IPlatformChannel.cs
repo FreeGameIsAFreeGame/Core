@@ -15,8 +15,12 @@ namespace FreeGameIsAFreeGame.Core
         /// </summary>
         int PlatformId { get; set; }
         /// <summary>
-        /// The discord id of the channel
+        /// The discord id of the channel for the initial message for the platform
         /// </summary>
-        ulong? Snowflake { get; set; }
+        ulong? SnowflakeInitial { get; set; }
+        /// <summary>
+        /// The discord id of the channel for the reminder message for the platform
+        /// </summary>
+        ulong? SnowflakeReminder { get; set; }
     }
 }
