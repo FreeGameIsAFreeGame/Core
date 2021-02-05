@@ -17,6 +17,6 @@ namespace FreeGameIsAFreeGame.Core
         /// <summary>
         /// The discord id of the channel
         /// </summary>
-        ulong Snowflake { get; set; }
+        ulong? Snowflake { get; set; }
     }
 }

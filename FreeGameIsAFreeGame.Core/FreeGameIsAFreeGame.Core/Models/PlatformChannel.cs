@@ -12,6 +12,6 @@ namespace FreeGameIsAFreeGame.Core.Models
         /// <inheritdoc />
         public int PlatformId { get; set; }
         /// <inheritdoc />
-        public ulong Snowflake { get; set; }
+        public ulong? Snowflake { get; set; }
     }
 }
