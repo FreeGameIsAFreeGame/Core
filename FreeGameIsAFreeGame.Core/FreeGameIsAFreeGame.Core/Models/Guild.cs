@@ -11,5 +11,9 @@ namespace FreeGameIsAFreeGame.Core.Models
         public ulong Snowflake { get; set; }
         /// <inheritdoc />
         public bool Enabled { get; set; }
+        /// <inheritdoc />
+        public ulong? CommandChannel { get; set; }
+        /// <inheritdoc />
+        public ulong? CommandRole { get; set; }
     }
 }
