@@ -1,11 +1,7 @@
 namespace FreeGameIsAFreeGame.Core
 {
-    public interface IPlatform
+    public interface IPlatform : IModel
     {
-        /// <summary>
-        /// The database entry id
-        /// </summary>
-        int Id { get; set; }
         /// <summary>
         /// The identifier used for filtering
         /// </summary>

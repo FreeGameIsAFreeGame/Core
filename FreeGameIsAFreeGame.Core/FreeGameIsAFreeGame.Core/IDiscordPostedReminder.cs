@@ -1,11 +1,7 @@
 namespace FreeGameIsAFreeGame.Core
 {
-    public interface IDiscordPostedReminder
+    public interface IDiscordPostedReminder : IModel
     {
-        /// <summary>
-        /// The database entry id
-        /// </summary>
-        int Id { get; set; }
         /// <summary>
         /// The database entry id of the deal
         /// </summary>

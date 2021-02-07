@@ -1,11 +1,7 @@
 namespace FreeGameIsAFreeGame.Core
 {
-    public interface IGuild
+    public interface IGuild : IModel
     {
-        /// <summary>
-        /// The database entry id
-        /// </summary>
-        int Id { get; set; }
         /// <summary>
         /// The discord id of the guild
         /// </summary>

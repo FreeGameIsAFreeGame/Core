@@ -1,11 +1,7 @@
 namespace FreeGameIsAFreeGame.Core
 {
-    public interface IPlatformMention
+    public interface IPlatformMention : IModel
     {
-        /// <summary>
-        /// The database entry id
-        /// </summary>
-        int Id { get; set; }
         /// <summary>
         /// The database entry id of the guild
         /// </summary>

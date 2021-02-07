@@ -2,12 +2,8 @@ using System;
 
 namespace FreeGameIsAFreeGame.Core
 {
-    public interface IDeal
+    public interface IDeal : IModel
     {
-        /// <summary>
-        /// The database entry id
-        /// </summary>
-        int Id { get; set; }
         /// <summary>
         /// The database entry id of the platform
         /// </summary>
