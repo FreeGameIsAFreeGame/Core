@@ -5,9 +5,9 @@ namespace FreeGameIsAFreeGame.Core
     public interface IDeal : IModel
     {
         /// <summary>
-        /// UUID of this deal
+        /// Hash that identifies this deal
         /// </summary>
-        string Uuid { get; set; }
+        string Hash { get; set; }
         /// <summary>
         /// The database entry id of the platform
         /// </summary>

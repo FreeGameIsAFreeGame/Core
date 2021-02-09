@@ -8,7 +8,7 @@ namespace FreeGameIsAFreeGame.Core.Models
         /// <inheritdoc />
         public int Id { get; set; }
         /// <inheritdoc />
-        public string Uuid { get; set; }
+        public string Hash { get; set; }
         /// <inheritdoc />
         public int PlatformId { get; set; }
         /// <inheritdoc />
