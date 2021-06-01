@@ -10,7 +10,8 @@ namespace FreeGameIsAFreeGame.Core.Apis
     public abstract class BasicApi<TInterface, TClass> where TClass : TInterface
     {
         internal BasicApi()
-        { }
+        {
+        }
 
         protected abstract string Slug { get; }
 
@@ -21,8 +22,8 @@ namespace FreeGameIsAFreeGame.Core.Apis
             if (result.IsSuccessful)
             {
                 return JsonConvert.DeserializeObject<List<TClass>>(result.Content)
-                                  .Cast<TInterface>()
-                                  .ToList();
+                    .Cast<TInterface>()
+                    .ToList();
             }
 
             throw new ApiException(result);
