@@ -8,7 +8,7 @@
         <PackageProjectUrl>https://github.com/FreeGameIsAFreeGame/Core</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/FreeGameIsAFreeGame/Core/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/FreeGameIsAFreeGame/Core</RepositoryUrl>
-        <PackageVersion>7.0.0</PackageVersion>
+        <PackageVersion>7.1.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
