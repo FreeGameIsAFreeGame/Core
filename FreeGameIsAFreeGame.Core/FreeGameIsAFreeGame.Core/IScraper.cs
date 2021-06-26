@@ -7,7 +7,6 @@ namespace FreeGameIsAFreeGame.Core
     public interface IScraper
     {
         string Identifier { get; }
-        string DisplayName { get; }
         Task Initialize();
         Task<IEnumerable<IDeal>> Scrape(CancellationToken token);
         Task Dispose();
