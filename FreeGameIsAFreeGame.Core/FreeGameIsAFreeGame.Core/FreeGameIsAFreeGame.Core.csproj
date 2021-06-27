@@ -8,6 +8,12 @@
         <PackageProjectUrl>https://github.com/FreeGameIsAFreeGame/Core</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/FreeGameIsAFreeGame/Core/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/FreeGameIsAFreeGame/Core</RepositoryUrl>
+        <PackageVersion>7.3.0</PackageVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="RestSharp" Version="106.11.7" />
+        <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="106.11.7" />
+    </ItemGroup>
 
 </Project>

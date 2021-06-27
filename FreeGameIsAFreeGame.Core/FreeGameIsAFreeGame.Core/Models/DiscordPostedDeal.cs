@@ -3,15 +3,15 @@ using System;
 namespace FreeGameIsAFreeGame.Core.Models
 {
     [Serializable]
-    public class Platform : IPlatform
+    public class DiscordPostedDeal : IDiscordPostedDeal
     {
         /// <inheritdoc />
         public int Id { get; set; }
         /// <inheritdoc />
-        public string Identifier { get; set; }
+        public int DealId { get; set; }
         /// <inheritdoc />
-        public string DisplayName { get; set; }
+        public int GuildId { get; set; }
         /// <inheritdoc />
-        public string IconUrl { get; set; }
+        public PostStatus Status { get; set; }
     }
 }

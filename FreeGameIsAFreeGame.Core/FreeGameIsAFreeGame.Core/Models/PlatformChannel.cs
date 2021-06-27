@@ -3,17 +3,17 @@ using System;
 namespace FreeGameIsAFreeGame.Core.Models
 {
     [Serializable]
-    public class Guild : IGuild
+    public class PlatformChannel : IPlatformChannel
     {
         /// <inheritdoc />
         public int Id { get; set; }
         /// <inheritdoc />
-        public ulong Snowflake { get; set; }
+        public int GuildId { get; set; }
         /// <inheritdoc />
-        public bool Enabled { get; set; }
+        public int PlatformId { get; set; }
         /// <inheritdoc />
-        public ulong? CommandChannel { get; set; }
+        public ulong? SnowflakeInitial { get; set; }
         /// <inheritdoc />
-        public ulong? CommandRole { get; set; }
+        public ulong? SnowflakeReminder { get; set; }
     }
 }
