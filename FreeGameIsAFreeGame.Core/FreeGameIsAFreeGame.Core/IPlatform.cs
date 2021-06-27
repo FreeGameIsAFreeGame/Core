@@ -10,5 +10,9 @@ namespace FreeGameIsAFreeGame.Core
         /// The name used for displaying to the public
         /// </summary>
         string DisplayName { get; set; }
+        /// <summary>
+        /// The icon url that can be displayed
+        /// </summary>
+        string IconUrl { get; set; }
     }
 }

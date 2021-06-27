@@ -11,5 +11,7 @@ namespace FreeGameIsAFreeGame.Core.Models
         public string Identifier { get; set; }
         /// <inheritdoc />
         public string DisplayName { get; set; }
+        /// <inheritdoc />
+        public string IconUrl { get; set; }
     }
 }
