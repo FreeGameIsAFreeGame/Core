@@ -2,8 +2,8 @@ using System;
 
 namespace FreeGameIsAFreeGame.Core.Models
 {
-    [Obsolete, Serializable]
-    public class PlatformChannel : IPlatformChannel
+    [Serializable]
+    public class GuildPlatform : IGuildPlatform
     {
         /// <inheritdoc />
         public int Id { get; set; }
@@ -12,8 +12,8 @@ namespace FreeGameIsAFreeGame.Core.Models
         /// <inheritdoc />
         public int PlatformId { get; set; }
         /// <inheritdoc />
-        public ulong? SnowflakeInitial { get; set; }
+        public bool EnabledInitial { get; set; }
         /// <inheritdoc />
-        public ulong? SnowflakeReminder { get; set; }
+        public bool EnabledReminder { get; set; }
     }
 }
