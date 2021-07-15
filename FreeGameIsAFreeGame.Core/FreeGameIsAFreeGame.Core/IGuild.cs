@@ -20,5 +20,9 @@ namespace FreeGameIsAFreeGame.Core
         /// Null means everyone
         /// </summary>
         ulong? CommandRole { get; set; }
+        /// <summary>
+        /// The discord id of the channel that things can be posted to
+        /// </summary>
+        ulong PostChannel { get; set; }
     }
 }

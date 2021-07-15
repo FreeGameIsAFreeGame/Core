@@ -1,9 +1,6 @@
-using System;
-
 namespace FreeGameIsAFreeGame.Core
 {
-    [Obsolete]
-    public interface IPlatformChannel : IModel
+    public interface IGuildPlatform : IModel
     {
         /// <summary>
         /// The database entry id of the guild
@@ -14,12 +11,12 @@ namespace FreeGameIsAFreeGame.Core
         /// </summary>
         int PlatformId { get; set; }
         /// <summary>
-        /// The discord id of the channel for the initial message for the platform
+        /// Should the initial message be posted for this platform & guild combination
         /// </summary>
-        ulong? SnowflakeInitial { get; set; }
+        bool EnabledInitial { get; set; }
         /// <summary>
-        /// The discord id of the channel for the reminder message for the platform
+        /// Should the reminder message be posted for this platform & guild combination
         /// </summary>
-        ulong? SnowflakeReminder { get; set; }
+        bool EnabledReminder { get; set; }
     }
 }

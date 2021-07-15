@@ -15,5 +15,7 @@ namespace FreeGameIsAFreeGame.Core.Models
         public ulong? CommandChannel { get; set; }
         /// <inheritdoc />
         public ulong? CommandRole { get; set; }
+        /// <inheritdoc />
+        public ulong PostChannel { get; set; }
     }
 }
