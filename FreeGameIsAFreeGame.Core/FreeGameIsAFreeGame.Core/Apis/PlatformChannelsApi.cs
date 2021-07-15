@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using FreeGameIsAFreeGame.Core.Models;
@@ -6,6 +7,7 @@ using RestSharp;
 
 namespace FreeGameIsAFreeGame.Core.Apis
 {
+    [Obsolete]
     public class PlatformChannelsApi : BasicApi<IPlatformChannel, PlatformChannel>
     {
 #region Overrides of BasicApi<IPlatformChannel,PlatformChannel>
